@@ -10,42 +10,121 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>TypeScript Intro Notes</title>
   </head>
   <body>
-    <div>
-      <h1>TypeScript Intro</h1>
+    <div class="m-5">
+      <h1 class="mb-3 display-4">TypeScript Intro Notes</h1>
       <div>
         <h3>General overview</h3>
-        <p>text</p>
+        <p>
+          TS is a super-set of Javascript, it helps us finds bugs before we run
+          our code. It must be compiled before we can view in our browser. You
+          must have knowledge of Javascript to be able to use TypeScript as it
+          builds on top of it.
+        </p>
       </div>
       <div>
         <h3>The TS compiler</h3>
-        <p>text</p>
+        <p>
+          The compiler configures a Javascript version of our TypeScript code by
+          running <strong>tsc filename.ts</strong> in the terminal.
+          <br />
+          TS compiler helps to convert code written in typescript to javascript
+          since the browser and html does not support or understand typescript
+          code unless it being converted.
+        </p>
       </div>
       <div>
         <h3>Type Inference</h3>
-        <p>text</p>
+        <p>
+          This is when no explicit type is provided, so an expression is written
+          to help TS calculate a "best common type".
+          <br />
+          This essentially gives you some options as to what the type can be,
+          instead of having only one.
+        </p>
       </div>
       <div>
         <h3>The ‘any’ Type</h3>
-        <p>text</p>
+        <p>Defining a variable as 'any' lets you assign any type to it.</p>
+        <p>
+          e.g
+          <br />
+          let anyVar: any = "a string"
+          <br />
+          anyVar = 5
+          <br />
+          the 'any' type kind of defeats the purpose of TypeScript since we can
+          change the type, but can be used when we need to use multiple types.
+        </p>
       </div>
       <div>
         <h3>The Union Type</h3>
-        <p>text</p>
+        <p>
+          This is a great way for us to use multiple types. The union types can
+          be signified with --> <strong>|</strong>
+          <br />
+          e.g
+          <br />
+          let year: string | number
+          <br />
+          --> year = 2021
+          <br />
+          --> year = "2021"
+          <br />
+          using the union type in this example, both string and number types are
+          valid.
+        </p>
       </div>
       <div>
         <h3>The Tuple Type</h3>
-        <p>text</p>
+        <p>
+          Tuples are used within arrays, when you want specific types to be
+          present in specific spots. If you define these spots, they must be
+          filled.
+          <br />
+          e.g
+          <br />
+          let arrTuple: [string, number] = ["a string, 5"]
+          <br />
+          arrTuple: ["a",4] <-- follows the correct order of types
+          <br />
+          In this array, we will always have a string as the first element, and
+          number as the second
+        </p>
       </div>
       <div>
         <h3>Interfaces in TS</h3>
-        <p>text</p>
+        <p>
+          Interfaces enforce a certain structure of an object, this furthers our
+          attempts in keeping code clean.
+          <br />
+          <br />
+          e.g
+          <br />
+          (we define an interface first with <strong>interface</strong>)
+          <br />
+          interface PersonInterface {
+          <br />
+          age: number; <br />name: string }
+          <br />
+          <br />
+          (now using the interface <strong>interface</strong>) <br />let
+          aneesah: PersonInterface = {
+          <br />
+          age: 23; <br />name: "Aneesah" }
+        </p>
       </div>
       <div>
         <h3>Generics in TS</h3>
-        <p>text</p>
+        <p>
+          Generics are used in instances where you don't know what type
+          something is going to be. <br />
+          Usually < T > is used in this case, but the T can be replaced with
+          anything else. The < T > acts as a placeholder.
+          <br />
+        </p>
       </div>
     </div>
     <script src="./index.js"></script>
